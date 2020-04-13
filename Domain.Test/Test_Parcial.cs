@@ -179,9 +179,9 @@ namespace Domain.Test
             InvalidOperationException ex2 = Assert.Throws<InvalidOperationException>(() => NuevoCredito.Abonar(NuevoCredito.Cedula, valorAbonar2));
             Assert.AreEqual(ex2.Message, "abonado con exito en las cuotas con indicador 1234 usted debe 7300000");
 
+
             List<Abono> Abonos = new List<Abono>();
             Abonos = NuevoCredito.ConsultarAbono(NuevoCredito.Cedula);
-
             foreach (var dto in NuevoCredito.Abonos)
             {
                 Console.WriteLine("-----------------------------------");
